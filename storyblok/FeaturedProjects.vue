@@ -17,7 +17,7 @@ defineProps({
       </h3>
       <p>{{ blok.subtitle }}</p>
       <div
-        v-if="blok.projects.length"
+        v-if="blok.projects?.length"
         class="grid grid-cols-1 pt-8 mx-auto lg:grid-cols-2 gap-7 sm:gap-6 sm:w-5/6 lg:w-full"
       >
         <NuxtLink
