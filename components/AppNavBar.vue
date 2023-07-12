@@ -15,21 +15,21 @@
       <div class="flex items-center gap-1 text-sm sm:gap-2">
         <NuxtLink to="/">
           <span
-            class="px-3 py-1 pb-2 transition-all rounded-md hover:bg-action-back sm:px-6 sm:py-2 lg:text-sm"
+            class="px-3 py-1 pb-2 transition-all rounded-md hover:bg-action-back hover:text-green-600 sm:px-6 sm:py-2 lg:text-sm"
           >
             Home
           </span>
         </NuxtLink>
         <NuxtLink to="/projects">
           <span
-            class="px-3 py-1 pb-2 transition-all rounded-md hover:bg-action-back sm:px-6 sm:py-2 lg:text-sm"
+            class="px-3 py-1 pb-2 transition-all rounded-md hover:bg-action-back hover:text-green-600 sm:px-6 sm:py-2 lg:text-sm"
           >
             Projects
           </span>
         </NuxtLink>
         <NuxtLink to="/about">
           <span
-            class="px-3 py-1 pb-2 transition-all rounded-md hover:bg-action-back sm:px-6 sm:py-2 lg:text-sm"
+            class="px-3 py-1 pb-2 transition-all rounded-md hover:bg-action-back hover:text-green-600 sm:px-6 sm:py-2 lg:text-sm"
           >
             About
           </span>

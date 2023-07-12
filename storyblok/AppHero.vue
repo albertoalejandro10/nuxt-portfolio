@@ -13,15 +13,14 @@ defineProps({
     <!-- Hero -->
     <div class="flex flex-col gap-8">
       <h1
-        class="text-xl leading-loose sm:text-3xl md:text-4xl xl:text-6xl text-head_text"
+        class="text-xl leading-loose sm:text-4xl md:text-5xl xl:text-7xl text-head_text"
       >
-        {{ blok.title }}
-        <span class="text-link_text_hover">.</span>
+        {{ blok.title }}<span class="text-link_text_hover">.</span>
       </h1>
-      <p class="text-sm leading-relaxed md:text-2xl">
+      <p class="text-sm leading-relaxed md:text-xl">
         {{ blok.subtitle }}
       </p>
-      <p class="text-sm leading-relaxed md:text-base">
+      <p class="text-sm text-justify leading-relaxed md:text-base">
         {{ blok.text }}
       </p>
     </div>

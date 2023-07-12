@@ -17,7 +17,7 @@ defineProps({
         v-for="icon in blok.icons"
         :key="icon._uid"
         :blok="icon"
-        class="ml-1"
+        class="ml-1 text-xs"
       />
     </span>
   </div>
