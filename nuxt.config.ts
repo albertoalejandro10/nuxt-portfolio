@@ -6,7 +6,6 @@ export default defineNuxtConfig({
       viewport: "width=500, initial-scale=1",
       title: "albertoalejandrodev",
       meta: [
-        // <meta name="description" content="My amazing site">
         {
           name: "Portfolio",
           content:
