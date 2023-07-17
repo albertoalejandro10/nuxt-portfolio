@@ -14,10 +14,6 @@ h6 {
   font-weight: bold;
 }
 
-.router-link-active.router-link-exact-active {
-  color: rgb(22 163 74);
-}
-
 .page-enter-active,
 .page-leave-active {
   transition: opacity 0.2s ease;

@@ -12,7 +12,7 @@ export default defineNuxtConfig({
             "My web developer portfolio. I'm open to work and ready to collaborate.",
         },
       ],
-      link: [{ rel: "icon", href: "/favicon.ico" }],
+      link: [{ rel: "icon", href: "/favicon.svg" }],
     },
   },
   modules: [

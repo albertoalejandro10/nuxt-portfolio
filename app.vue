@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 useHead({
   titleTemplate: (titleChunk) => {
     return titleChunk
@@ -10,6 +10,7 @@ useHead({
 
 <template>
   <NuxtLayout>
+    <NuxtLoadingIndicator />
     <NuxtPage />
   </NuxtLayout>
 </template>

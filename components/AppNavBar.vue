@@ -2,7 +2,7 @@
   <Teleport to="body">
     <!-- Navbar -->
     <nav
-      class="bottom-0 px-3 py-3 flex justify-between items-center border-b-[1px] border-border_sm fixed w-full bg-navbar_back backdrop-blur-sm sm:top-0 sm:bottom-auto sm:px-6 lg:py-4"
+      class="bottom-0 z-20 px-3 py-3 flex justify-between items-center border-b-[1px] border-border_sm fixed w-full bg-navbar_back backdrop-blur-sm sm:top-0 sm:bottom-auto sm:px-6 lg:py-4"
     >
       <div class="h-[1px] top-0 absolute left-0 w-full bg-topbar lg:h-1"></div>
       <a
@@ -10,7 +10,7 @@
         href="/"
         class="text-3xl font-normal select-none router-link-active router-link-exact-active lg:text-4xl"
       >
-        Portafolio
+        <img src="../assets/images/logo.svg" alt="logo" />
       </a>
       <div class="flex items-center gap-1 text-sm sm:gap-2">
         <NuxtLink to="/">
@@ -38,3 +38,9 @@
     </nav>
   </Teleport>
 </template>
+
+<style scoped>
+.router-link-active.router-link-exact-active {
+  color: rgb(22 163 74);
+}
+</style>
