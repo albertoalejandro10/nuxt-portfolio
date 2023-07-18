@@ -23,7 +23,6 @@ defineProps({
       >
         <a
           class="flex flex-col items-start justify-between gap-1 sm:flex-row flex-nowrap sm:gap-6"
-          href="#"
           ><span class="font-theme_bold text-head_text">{{
             body[0].value
           }}</span

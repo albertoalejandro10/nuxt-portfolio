@@ -10,7 +10,7 @@ defineProps({
 
 <template>
   <div v-editable="blok" class="flex items-center">
-    <a :href="blok.link.cached_url">{{ blok.text }}</a>
+    <a class="font-medium" :href="blok.link.cached_url">{{ blok.text }}</a>
     <span v-if="blok.icons?.length">
       <component
         :is="icon.component"
