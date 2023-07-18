@@ -15,11 +15,11 @@
       <div class="flex items-center gap-1 text-sm sm:gap-2">
         <NuxtLink to="/">
           <span
-            class="flex items-center px-3 font-semibold transition-all rounded-md hover:bg-action-back hover:text-green-600 sm:px-6 sm:py-2 lg:text-sm"
+            class="flex items-center text-xs px-3 transition-all rounded-md hover:bg-action-back hover:text-green-600 sm:px-6 sm:py-2 md:font-semibold md:text-base lg:text-sm"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="icon icon-tabler icon-tabler-home"
+              class="icon icon-tabler icon-tabler-home hidden md:block"
               width="16"
               height="16"
               viewBox="0 0 24 24"
@@ -34,16 +34,16 @@
               <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
               <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
             </svg>
-            &nbsp; Home
+            Home
           </span>
         </NuxtLink>
         <NuxtLink to="/projects">
           <span
-            class="flex items-center px-3 font-semibold transition-all rounded-md hover:bg-action-back hover:text-green-600 sm:px-6 sm:py-2 lg:text-sm"
+            class="flex items-center text-xs px-3 transition-all rounded-md hover:bg-action-back hover:text-green-600 sm:px-6 sm:py-2 md:font-semibold md:text-base lg:text-sm"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="icon icon-tabler icon-tabler-checklist"
+              class="icon icon-tabler icon-tabler-checklist hidden md:block"
               width="16"
               height="16"
               viewBox="0 0 24 24"
@@ -61,16 +61,16 @@
               <path d="M9 8h4" />
               <path d="M9 12h2" />
             </svg>
-            &nbsp; Projects
+            Projects
           </span>
         </NuxtLink>
         <NuxtLink to="/about">
           <span
-            class="flex items-center px-3 font-semibold transition-all rounded-md hover:bg-action-back hover:text-green-600 sm:px-6 sm:py-2 lg:text-sm"
+            class="flex items-center text-xs px-3 transition-all rounded-md hover:bg-action-back hover:text-green-600 sm:px-6 sm:py-2 md:font-semibold md:text-base lg:text-sm"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="icon icon-tabler icon-tabler-user-question"
+              class="icon icon-tabler icon-tabler-user-question hidden md:block"
               width="16"
               height="16"
               viewBox="0 0 24 24"
@@ -88,7 +88,7 @@
                 d="M19 19a2.003 2.003 0 0 0 .914 -3.782a1.98 1.98 0 0 0 -2.414 .483"
               />
             </svg>
-            &nbsp; About
+            About
           </span>
         </NuxtLink>
       </div>
