@@ -8,13 +8,17 @@ defineProps({
   },
 })
 
-const defaultCSSClasses = "object-cover w-full h-56 rounded-xl mb-10"
+const defaultCSSClasses = "object-cover w-full h-auto rounded-xl mb-10"
 const attrs = useAttrs()
 const cssClasses = computed(() => attrs.class || defaultCSSClasses)
 </script>
 
 <template>
   <div v-editable="blok">
-    <img :src="blok.image.filename" :class="cssClasses" :alt="blok.image.alt" />
+    <img
+      :src="blok.image.filename"
+      :class="[cssClasses, 'h-48']"
+      :alt="blok.image.alt"
+    />
   </div>
 </template>
