@@ -8,21 +8,21 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^6.8.0",
-    "@typescript-eslint/eslint-plugin": "^5.62.0",
-    "@typescript-eslint/parser": "^5.62.0",
-    "@vue/eslint-config-standard": "^8.0.1",
-    "eslint": "^8.44.0",
-    "eslint-config-prettier": "^8.8.0",
-    "eslint-plugin-nuxt": "^4.0.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-vue": "^9.15.1",
+    "@nuxtjs/tailwindcss": "6.8.0",
+    "@typescript-eslint/eslint-plugin": "5.62.0",
+    "@typescript-eslint/parser": "5.62.0",
+    "@vue/eslint-config-standard": "8.0.1",
+    "eslint": "8.44.0",
+    "eslint-config-prettier": "8.8.0",
+    "eslint-plugin-nuxt": "4.0.0",
+    "eslint-plugin-prettier": "4.2.1",
+    "eslint-plugin-vue": "9.15.1",
     "nuxt": "3.0.0",
-    "nuxt-simple-sitemap": "^1.0.11",
-    "prettier": "^2.8.8",
-    "typescript": "^4.9.5"
+    "nuxt-simple-sitemap": "1.0.11",
+    "prettier": "2.8.8",
+    "typescript": "4.9.5"
   },
   "dependencies": {
-    "@storyblok/nuxt": "^5.5.2"
+    "@storyblok/nuxt": "5.5.2"
   }
 }

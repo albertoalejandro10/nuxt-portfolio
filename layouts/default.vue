@@ -6,22 +6,6 @@
     >
       <slot />
     </div>
-    <AppFooter v-if="showFooter" />
+    <AppFooter />
   </div>
 </template>
-
-<script>
-export default {
-  data() {
-    return {
-      showFooter: true,
-    }
-  },
-  methods: {
-    toggleFooter() {
-      this.showFooter = !this.showFooter
-      this.$emit("toggle-footer", this.showFooter)
-    },
-  },
-}
-</script>
