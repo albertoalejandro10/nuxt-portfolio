@@ -35,3 +35,8 @@ body {
 div > .router-link-active {
   @apply pt-2 pb-2 rounded-md bg-btn_back text-btn_text;
 }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 0px;
+}
