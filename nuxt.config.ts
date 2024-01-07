@@ -17,6 +17,7 @@ export default defineNuxtConfig({
     },
   },
   modules: [
+    "@nuxtjs/i18n",
     "nuxt-simple-sitemap",
     "@nuxtjs/tailwindcss",
     [
@@ -30,6 +31,20 @@ export default defineNuxtConfig({
       },
     ],
   ],
+  i18n: {
+    locales: [
+      {
+        code: "en",
+        name: "English",
+      },
+      {
+        code: "es",
+        name: "Español",
+      },
+    ],
+    defaultLocale: "en",
+    strategy: "prefix_except_default",
+  },
   runtimeConfig: {
     public: {
       siteUrl:
