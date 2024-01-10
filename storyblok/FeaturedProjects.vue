@@ -1,4 +1,5 @@
 <script setup>
+const localePath = useLocalePath()
 defineProps({
   blok: {
     type: Object,
@@ -23,7 +24,7 @@ defineProps({
         <NuxtLink
           v-for="{ uuid, content } in blok.projects"
           :key="uuid"
-          to="/projects"
+          :to="localePath('/projects')"
           class="flex flex-col w-full p-6 py-6 lg:p-6 lg:py-10 items-center gap-8 rounded-md bg-item_back hover:bg-item_hover_back transition-colors border-[1px] border-border_sm"
         >
           <div class="overflow-hidden aspect-video rounded-xl relative group">
@@ -34,7 +35,9 @@ defineProps({
                 <div
                   class="flex items-center p-4 text-xl group-hover:opacity-100 group-hover:translate-y-0 translate-y-4 pb-6 transform transition duration-300 ease-in-out"
                 >
-                  <div class="text-head_text">Technologies used:</div>
+                  <div class="text-head_text">
+                    {{ content.technologies }}
+                  </div>
                   <div
                     v-for="{ alt, filename } in content.icons"
                     :key="content.icons.id"

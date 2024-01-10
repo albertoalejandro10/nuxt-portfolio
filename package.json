@@ -9,21 +9,21 @@
   },
   "devDependencies": {
     "@nuxtjs/i18n": "8.0.0",
-    "@nuxtjs/tailwindcss": "6.8.0",
-    "@typescript-eslint/eslint-plugin": "5.62.0",
-    "@typescript-eslint/parser": "5.62.0",
+    "@nuxtjs/tailwindcss": "6.10.3",
+    "@typescript-eslint/eslint-plugin": "6.18.0",
+    "@typescript-eslint/parser": "6.18.0",
     "@vue/eslint-config-standard": "8.0.1",
-    "eslint": "8.44.0",
-    "eslint-config-prettier": "8.8.0",
+    "eslint": "8.56.0",
+    "eslint-config-prettier": "9.1.0",
     "eslint-plugin-nuxt": "4.0.0",
-    "eslint-plugin-prettier": "4.2.1",
-    "eslint-plugin-vue": "9.15.1",
-    "nuxt": "3.0.0",
-    "nuxt-simple-sitemap": "1.0.11",
-    "prettier": "2.8.8",
-    "typescript": "4.9.5"
+    "eslint-plugin-prettier": "5.1.2",
+    "eslint-plugin-vue": "9.19.2",
+    "nuxt": "3.9.1",
+    "nuxt-simple-sitemap": "4.4.1",
+    "prettier": "3.1.1",
+    "typescript": "5.3.3"
   },
   "dependencies": {
-    "@storyblok/nuxt": "5.5.2"
+    "@storyblok/nuxt": "6.0.0"
   }
 }

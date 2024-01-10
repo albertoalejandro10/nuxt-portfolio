@@ -1,3 +1,8 @@
+<script setup>
+import ChangeLanguage from "./ChangeLanguage.vue"
+const localePath = useLocalePath()
+</script>
+
 <template>
   <Teleport to="body">
     <!-- Navbar -->
@@ -13,27 +18,24 @@
         <img src="../assets/images/logo.svg" alt="logo" />
       </a>
       <div class="flex items-center gap-1 text-sm sm:gap-2">
-        <NuxtLink to="/">
+        <NuxtLink :to="localePath('/')">
           <span
             class="flex items-center text-xs px-3 transition-all rounded-md hover:bg-action-back hover:text-green-600 sm:px-6 sm:py-2 md:font-semibold md:text-base lg:text-sm"
           >
-            <HomeIcon />
             Home
           </span>
         </NuxtLink>
-        <NuxtLink to="/projects">
+        <NuxtLink :to="localePath('/projects')">
           <span
             class="flex items-center text-xs px-3 transition-all rounded-md hover:bg-action-back hover:text-green-600 sm:px-6 sm:py-2 md:font-semibold md:text-base lg:text-sm"
           >
-            <ProjectsIcon />
             Projects
           </span>
         </NuxtLink>
-        <NuxtLink to="/about">
+        <NuxtLink :to="localePath('/about')">
           <span
             class="flex items-center text-xs px-3 transition-all rounded-md hover:bg-action-back hover:text-green-600 sm:px-6 sm:py-2 md:font-semibold md:text-base lg:text-sm"
           >
-            <AboutIcon />
             About
           </span>
         </NuxtLink>
@@ -42,22 +44,6 @@
     </nav>
   </Teleport>
 </template>
-
-<script>
-import HomeIcon from "./icons/HomeIcon.vue"
-import ProjectsIcon from "./icons/ProjectsIcon.vue"
-import AboutIcon from "./icons/AboutIcon.vue"
-import ChangeLanguage from "./ChangeLanguage.vue"
-
-export default {
-  components: {
-    HomeIcon,
-    ProjectsIcon,
-    AboutIcon,
-    ChangeLanguage,
-  },
-}
-</script>
 
 <style scoped>
 .router-link-active.router-link-exact-active {

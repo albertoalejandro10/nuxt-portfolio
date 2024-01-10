@@ -1,6 +1,8 @@
 <script setup>
+const { locale } = useI18n()
 const story = await useAsyncStoryblok("projects", {
-  version: "draft",
+  language: locale.value,
+  version: "published",
 })
 useHead({
   title: story.value.name,
