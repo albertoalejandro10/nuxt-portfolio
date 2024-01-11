@@ -10,7 +10,7 @@ const {
   data: { stories },
 } = await storyblokApi.get("cdn/stories", {
   language: locale.value,
-  version: "published",
+  version: "draft",
   starts_with: "projects",
 })
 projects.value = stories.filter((story) => story.is_startpage !== true)

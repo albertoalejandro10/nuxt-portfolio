@@ -1,7 +1,7 @@
 <script setup>
 const { locale } = useI18n()
 const story = await useAsyncStoryblok("home", {
-  version: "published",
+  version: "draft",
   language: locale.value,
   resolve_relations: ["featured-projects.projects"],
 })

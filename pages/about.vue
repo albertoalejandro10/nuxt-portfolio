@@ -2,7 +2,7 @@
 const { locale } = useI18n()
 const story = await useAsyncStoryblok("about", {
   language: locale.value,
-  version: "published",
+  version: "draft",
 })
 useHead({
   title: story.value.name,
