@@ -13,7 +13,7 @@ const localePath = useLocalePath()
       <a
         aria-current="page"
         href="/"
-        class="text-3xl font-normal select-none router-link-active router-link-exact-active lg:text-4xl"
+        class="hidden text-3xl font-normal select-none router-link-active router-link-exact-active sm:block lg:text-4xl"
       >
         <img src="../assets/images/logo.svg" alt="logo" />
       </a>
@@ -47,6 +47,6 @@ const localePath = useLocalePath()
 
 <style scoped>
 .router-link-active.router-link-exact-active {
-  color: rgb(22 163 74);
+  color: rgb(29, 204, 93);
 }
 </style>

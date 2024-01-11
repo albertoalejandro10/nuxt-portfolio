@@ -13,9 +13,9 @@ defineProps({
   <div v-editable="blok">
     <!-- Featured projects -->
     <div class="flex flex-col gap-2 lg:gap-2">
-      <h3 class="text-base md:text-2xl lg:text-4xl text-head_text">
+      <h2 class="text-base md:text-2xl lg:text-4xl text-head_text">
         {{ blok.title }}
-      </h3>
+      </h2>
       <p>{{ blok.subtitle }}</p>
       <div
         v-if="blok.projects?.length"

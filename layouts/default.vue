@@ -1,3 +1,11 @@
+<script>
+export default {
+  head() {
+    return this.$nuxtI18nHead({ addSeoAttributes: true })
+  },
+}
+</script>
+
 <template>
   <div class="w-full">
     <AppNavBar />

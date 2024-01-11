@@ -23,7 +23,7 @@ const getLanguageButtonClasses = (lang) => {
       :class="getLanguageButtonClasses('en')"
     >
       <EnglishIcon class="mr-1" />
-      EN
+      <span>English</span>
     </button>
     <button
       aria-label="Switch to Spanish"
@@ -31,7 +31,7 @@ const getLanguageButtonClasses = (lang) => {
       :class="getLanguageButtonClasses('es')"
     >
       <SpanishIcon class="mr-1" />
-      ES
+      <span>Spanish</span>
     </button>
   </div>
 </template>

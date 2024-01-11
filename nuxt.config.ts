@@ -3,8 +3,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       charset: "utf-16",
-      viewport:
-        "initial-scale=1, user-scalable=no, width=device-width, height=device-height, viewport-fit=cover' ",
+      viewport: "initial-scale=1, maximum-scale=5, width=device-width",
       title: "albertoalejandrodev",
       meta: [
         {
