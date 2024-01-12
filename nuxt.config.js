@@ -11,11 +11,16 @@ export default defineNuxtConfig({
           content:
             "My web developer portfolio. I'm open to work and ready to collaborate.",
         },
+        {
+          rel: "preconnect",
+          href: "https://fonts.gstatic.com",
+        },
       ],
       link: [{ rel: "icon", href: "/favicon.svg" }],
     },
   },
   modules: [
+    "@nuxt/image",
     "@nuxtjs/i18n",
     "nuxt-simple-sitemap",
     "@nuxtjs/tailwindcss",

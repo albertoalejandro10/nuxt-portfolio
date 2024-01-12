@@ -11,7 +11,7 @@ defineProps({
 <template>
   <div v-editable="blok">
     <div class="flex flex-col items-center gap-8">
-      <img
+      <NuxtImg
         :alt="blok.image.alt"
         :src="blok.image.filename"
         class="w-full rounded-lg"

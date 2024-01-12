@@ -40,10 +40,10 @@ defineProps({
                   </div>
                   <div
                     v-for="{ alt, filename } in content.icons"
-                    :key="content.icons.id"
+                    :key="filename"
                   >
                     <!-- Icons -->
-                    <img
+                    <NuxtImg
                       class="mx-1"
                       width="34"
                       height="34"
@@ -54,7 +54,7 @@ defineProps({
                 </div>
               </div>
             </div>
-            <img
+            <NuxtImg
               :alt="content.image.alt"
               :src="content.image.filename"
               class="object-cover w-full aspect-square group-hover:scale-110 transition duration-300 ease-in-out"

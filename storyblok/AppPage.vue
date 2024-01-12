@@ -11,9 +11,9 @@ defineProps({
 <template>
   <div v-editable="blok">
     <StoryblokComponent
-      v-for="blok in blok.body"
-      :key="blok._uid"
-      :blok="blok"
+      v-for="AloneBlok in blok.body"
+      :key="AloneBlok._uid"
+      :blok="AloneBlok"
     />
   </div>
 </template>

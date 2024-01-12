@@ -27,7 +27,7 @@ defineProps({
   </div>
   <!-- Contact and Social -->
   <div class="flex items-center justify-between mt-6">
-    <div class="flex gap-1" v-if="blok.icons.length">
+    <div v-if="blok.icons.length" class="flex gap-1">
       <component
         :is="icon.component"
         v-for="icon in blok.icons"

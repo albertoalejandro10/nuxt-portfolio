@@ -19,16 +19,16 @@ const getLanguageButtonClasses = (lang) => {
   <div class="inline-flex">
     <button
       aria-label="Switch to English"
-      @click="switchLanguage('en')"
       :class="getLanguageButtonClasses('en')"
+      @click="switchLanguage('en')"
     >
       <EnglishIcon class="mr-1" />
       <span>English</span>
     </button>
     <button
       aria-label="Switch to Spanish"
-      @click="switchLanguage('es')"
       :class="getLanguageButtonClasses('es')"
+      @click="switchLanguage('es')"
     >
       <SpanishIcon class="mr-1" />
       <span>Spanish</span>

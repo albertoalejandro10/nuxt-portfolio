@@ -15,7 +15,7 @@ const cssClasses = computed(() => attrs.class || defaultCSSClasses)
 
 <template>
   <div v-editable="blok">
-    <img
+    <NuxtImg
       :src="blok.image.filename"
       :class="[cssClasses, 'h-48']"
       :alt="blok.image.alt"

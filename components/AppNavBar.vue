@@ -15,7 +15,7 @@ const localePath = useLocalePath()
         href="/"
         class="hidden text-3xl font-normal select-none router-link-active router-link-exact-active sm:block lg:text-4xl"
       >
-        <img src="../assets/images/logo.svg" alt="logo" />
+        <NuxtImg src="../public/logo.svg" alt="logo" width="170" height="40" />
       </a>
       <div class="flex items-center gap-1 text-sm sm:gap-2">
         <NuxtLink :to="localePath('/')">
