@@ -11,12 +11,15 @@ export default defineNuxtConfig({
           content:
             "My web developer portfolio. I'm open to work and ready to collaborate.",
         },
+      ],
+      link: [
+        { rel: "icon", href: "/favicon.svg" },
         {
           rel: "preconnect",
           href: "https://fonts.gstatic.com",
+          crossorigin: true,
         },
       ],
-      link: [{ rel: "icon", href: "/favicon.svg" }],
     },
   },
   modules: [

@@ -6,6 +6,7 @@ const story = await useAsyncStoryblok("about", {
 })
 useHead({
   title: story.value.name,
+  meta: [{ name: "About", content: "About Alberto Alejandro" }],
 })
 </script>
 

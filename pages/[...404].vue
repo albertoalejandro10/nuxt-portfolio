@@ -15,18 +15,14 @@
   </div>
 </template>
 
-<script>
-export default {
-  methods: {
-    redirectToHome() {
-      this.$router.push("/")
-    },
-  },
-  mounted() {
-    this.$emit("toggle-footer", false)
-  },
-  beforeUnmount() {
-    this.$emit("toggle-footer", true)
-  },
+<script setup>
+import { useRouter } from "vue-router"
+
+// Methods are just functions
+const router = useRouter()
+const { locale } = useI18n()
+const language = locale.value !== "en" ? "es" : ""
+const redirectToHome = () => {
+  router.push(`/${language}`)
 }
 </script>

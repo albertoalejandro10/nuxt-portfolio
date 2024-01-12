@@ -15,7 +15,12 @@ defineProps({
       :title="blok.link.title"
       :target="blok.link.target"
     >
-      <NuxtImg :src="blok.image.filename" :alt="blok.image.alt" />
+      <NuxtImg
+        :src="blok.image.filename"
+        :alt="blok.image.alt"
+        width="24"
+        height="24"
+      />
     </a>
   </div>
 </template>
