@@ -25,18 +25,18 @@ const localePath = useLocalePath()
             Home
           </span>
         </NuxtLink>
-        <NuxtLink :to="localePath('/projects')">
-          <span
-            class="flex items-center text-xs px-3 transition-all rounded-md hover:bg-action-back hover:text-green-600 sm:px-6 sm:py-2 md:font-semibold md:text-base lg:text-sm"
-          >
-            Projects
-          </span>
-        </NuxtLink>
         <NuxtLink :to="localePath('/about')">
           <span
             class="flex items-center text-xs px-3 transition-all rounded-md hover:bg-action-back hover:text-green-600 sm:px-6 sm:py-2 md:font-semibold md:text-base lg:text-sm"
           >
             About
+          </span>
+        </NuxtLink>
+        <NuxtLink :to="localePath('/projects')">
+          <span
+            class="flex items-center text-xs px-3 transition-all rounded-md hover:bg-action-back hover:text-green-600 sm:px-6 sm:py-2 md:font-semibold md:text-base lg:text-sm"
+          >
+            Projects
           </span>
         </NuxtLink>
         <ChangeLanguage />
