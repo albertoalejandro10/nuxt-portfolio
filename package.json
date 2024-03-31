@@ -9,6 +9,7 @@
   },
   "devDependencies": {
     "@nuxt/image": "1.2.0",
+    "@nuxtjs/google-analytics": "2.4.0",
     "@nuxtjs/i18n": "8.0.0",
     "@nuxtjs/tailwindcss": "6.10.3",
     "@typescript-eslint/eslint-plugin": "6.18.0",

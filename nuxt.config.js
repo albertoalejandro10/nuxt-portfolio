@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  target: "static",
   app: {
     head: {
       charset: "utf-16",
@@ -20,6 +21,15 @@ export default defineNuxtConfig({
           crossorigin: true,
         },
       ],
+    },
+  },
+  buildModules: ["@nuxtjs/google-analytics"],
+  googleAnalytics: {
+    id: process.env.GOOGLE_ANALYTICS_ID, // Use as fallback if no runtime config is provided
+  },
+  publicRuntimeConfig: {
+    googleAnalytics: {
+      id: process.env.GOOGLE_ANALYTICS_ID,
     },
   },
   modules: [
