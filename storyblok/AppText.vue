@@ -17,7 +17,7 @@ const cssClasses = computed(() => attrs.class || defaultCSSClasses)
 <template>
   <div v-editable="blok">
     <div :class="cssClasses">
-      <div v-html="richText"></div>
+      <div v-dompurify-html="richText"></div>
     </div>
   </div>
 </template>

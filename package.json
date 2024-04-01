@@ -26,6 +26,7 @@
     "typescript": "5.3.3"
   },
   "dependencies": {
-    "@storyblok/nuxt": "6.0.0"
+    "@storyblok/nuxt": "6.0.0",
+    "vue-dompurify-html": "5.0.1"
   }
 }

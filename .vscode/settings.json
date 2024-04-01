@@ -2,5 +2,11 @@
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "prettier.semi": false,
-  "javascript.format.semicolons": "remove"
+  "javascript.format.semicolons": "remove",
+  "files.associations": {
+    "*.vue": "vue"
+  },
+  "tailwindCSS.includeLanguages": {
+    "vue": "html"
+  }
 }
