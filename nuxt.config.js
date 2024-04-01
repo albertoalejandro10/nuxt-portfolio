@@ -65,7 +65,8 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       siteUrl:
-        process.env.NUXT_PUBLIC_SITE_URL || "https://albertoalejandro.dev",
+        process.env.NUXT_PUBLIC_SITE_URL ||
+        "https://albertoalejandro10.netlify.app",
     },
   },
 })
