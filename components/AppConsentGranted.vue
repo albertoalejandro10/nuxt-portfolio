@@ -38,7 +38,7 @@ onMounted(() => {
   >
     <div class="flex items-center justify-center gap-2 xl:gap-4">
       <NuxtImg
-        src="./google-analytics.png"
+        src="/google-analytics.png"
         alt="google-analytics-logo"
         class="flex-none self-center w-14 md:w-24"
       />
