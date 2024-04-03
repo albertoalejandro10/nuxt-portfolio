@@ -1,6 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  target: "static",
   app: {
     head: {
       charset: "utf-16",
@@ -23,16 +22,8 @@ export default defineNuxtConfig({
       ],
     },
   },
-  buildModules: ["@nuxtjs/google-analytics"],
-  googleAnalytics: {
-    id: process.env.GOOGLE_ANALYTICS_ID, // Use as fallback if no runtime config is provided
-  },
-  publicRuntimeConfig: {
-    googleAnalytics: {
-      id: process.env.GOOGLE_ANALYTICS_ID,
-    },
-  },
   modules: [
+    "nuxt-gtag",
     "@nuxt/image",
     "@nuxtjs/i18n",
     "nuxt-simple-sitemap",
@@ -53,14 +44,22 @@ export default defineNuxtConfig({
       {
         code: "en",
         name: "English",
+        file: "en.json",
       },
       {
         code: "es",
         name: "Español",
+        file: "es.json",
       },
     ],
+    lazy: true,
+    langDir: "locales/",
     defaultLocale: "en",
     strategy: "prefix_except_default",
+  },
+  gtag: {
+    enabled: false,
+    id: process.env.NUXT_PUBLIC_GTAG_ID,
   },
   runtimeConfig: {
     public: {

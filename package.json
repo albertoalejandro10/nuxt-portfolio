@@ -9,7 +9,6 @@
   },
   "devDependencies": {
     "@nuxt/image": "1.2.0",
-    "@nuxtjs/google-analytics": "2.4.0",
     "@nuxtjs/i18n": "8.0.0",
     "@nuxtjs/tailwindcss": "6.10.3",
     "@typescript-eslint/eslint-plugin": "6.18.0",
@@ -21,6 +20,7 @@
     "eslint-plugin-prettier": "5.1.2",
     "eslint-plugin-vue": "9.19.2",
     "nuxt": "3.9.1",
+    "nuxt-gtag": "2.0.5",
     "nuxt-simple-sitemap": "4.4.1",
     "prettier": "3.1.1",
     "typescript": "5.3.3"

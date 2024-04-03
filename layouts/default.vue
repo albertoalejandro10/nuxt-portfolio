@@ -1,9 +1,5 @@
-<script>
-export default {
-  head() {
-    return this.$nuxtI18nHead({ addSeoAttributes: true })
-  },
-}
+<script setup>
+// const { gtag, initialize } = useGtag()
 </script>
 
 <template>
@@ -14,6 +10,7 @@ export default {
     >
       <slot />
     </div>
+    <AppConsentGranted></AppConsentGranted>
     <AppFooter />
   </div>
 </template>
