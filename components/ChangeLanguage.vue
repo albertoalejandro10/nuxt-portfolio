@@ -10,7 +10,7 @@ const switchLanguage = (lang) => {
 
 const getLanguageButtonClasses = (lang) => {
   const baseClasses =
-    "inline-flex items-center px-2 py-2 text-xs font-medium text-center text-white focus:ring-2 focus:outline-none hover:bg-green-800 focus:ring-green-800 first:rounded-l-lg first:rounded-r-none last:rounded-r-lg last:rounded-l-none"
+    "inline-flex items-center px-2 py-2 text-xs font-medium text-center text-white focus:ring-2 focus:outline-none hover:bg-green-800 focus:ring-green-800 first:rounded-l-md first:rounded-r-none last:rounded-r-md last:rounded-l-none"
   return locale.value === lang ? `${baseClasses} active` : baseClasses
 }
 </script>
