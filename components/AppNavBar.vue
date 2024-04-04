@@ -1,6 +1,11 @@
 <script setup>
 import ChangeLanguage from "./ChangeLanguage.vue"
 const localePath = useLocalePath()
+
+const { t } = useI18n()
+const home = computed(() => t("AppNavBar.home"))
+const about = computed(() => t("AppNavBar.about"))
+const projects = computed(() => t("AppNavBar.projects"))
 </script>
 
 <template>
@@ -22,21 +27,21 @@ const localePath = useLocalePath()
           <span
             class="flex items-center text-xs px-3 transition-all rounded-md hover:bg-action-back hover:text-green-600 sm:px-6 sm:py-2 md:font-semibold md:text-base lg:text-sm"
           >
-            Home
+            {{ home }}
           </span>
         </NuxtLink>
         <NuxtLink :to="localePath('/about')">
           <span
             class="flex items-center text-xs px-3 transition-all rounded-md hover:bg-action-back hover:text-green-600 sm:px-6 sm:py-2 md:font-semibold md:text-base lg:text-sm"
           >
-            About
+            {{ about }}
           </span>
         </NuxtLink>
         <NuxtLink :to="localePath('/projects')">
           <span
             class="flex items-center text-xs px-3 transition-all rounded-md hover:bg-action-back hover:text-green-600 sm:px-6 sm:py-2 md:font-semibold md:text-base lg:text-sm"
           >
-            Projects
+            {{ projects }}
           </span>
         </NuxtLink>
         <ChangeLanguage />

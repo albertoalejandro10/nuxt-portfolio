@@ -1,5 +1,16 @@
 {
-  "consentMessage": "This page uses Google Analytics to collect information about the number of visitors and their location. This helps me to know my visitors. By accepting, you allow me to save this information in the statistics.",
-  "acceptButton": "Accept",
-  "rejectButton": "Reject"
+  "AppConsentGranted": {
+    "consentMessage": "This page uses Google Analytics to collect information about the number of visitors and their location. This helps me to know my visitors. By accepting, you allow me to save this information in the statistics.",
+    "acceptButton": "Accept",
+    "rejectButton": "Reject"
+  },
+  "AppNavBar": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects"
+  },
+  "AppFooter": {
+    "credits": "Credits for the main design to",
+    "madeWith": "Made with ❤️ by"
+  }
 }

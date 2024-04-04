@@ -4,11 +4,9 @@ import AcceptIcon from "./icons/AcceptIcon.vue"
 import RejectIcon from "./icons/RejectIcon.vue"
 
 const { t } = useI18n()
-const { initialize } = useGtag()
-
-const description = computed(() => t("consentMessage"))
-const acceptButton = computed(() => t("acceptButton"))
-const rejectButton = computed(() => t("rejectButton"))
+const description = computed(() => t("AppConsentGranted.consentMessage"))
+const acceptButton = computed(() => t("AppConsentGranted.acceptButton"))
+const rejectButton = computed(() => t("AppConsentGranted.rejectButton"))
 
 const show = ref(false)
 const reject = () => {
@@ -16,6 +14,7 @@ const reject = () => {
   localStorage.setItem("userConsent", "rejected")
 }
 
+const { initialize } = useGtag()
 const acceptTracking = () => {
   show.value = false
   initialize(process.env.NUXT_PUBLIC_GTAG_ID)
