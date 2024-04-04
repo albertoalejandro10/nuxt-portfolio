@@ -31,39 +31,48 @@ onMounted(() => {
 </script>
 
 <template>
-  <div
-    v-if="show"
-    class="bg-background rounded shadow-sm drop-shadow z-50 border-t-4 border-green-500 fixed inset-x-0 bottom-4 p-3 w-5/6 m-auto md:w-2/4 lg:w-1/3 xl:w-96 xl:right-4 xl:left-auto"
+  <transition
+    enter-active-class="transition ease-out duration-100"
+    enter-class="transform opacity-0 scale-95"
+    enter-to-class="transform opacity-100 scale-100"
+    leave-active-class="transition ease-in duration-75"
+    leave-class="transform opacity-100 scale-100"
+    leave-to-class="transform opacity-0 scale-95"
   >
-    <div class="flex items-center justify-center gap-2 xl:gap-4">
-      <img
-        src="/google-analytics.png"
-        alt="google-analytics-logo"
-        class="flex-none self-center w-14 md:w-24"
-      />
-      <div class="flex-1">
-        <p
-          class="text-xs text-p_text leading-2 tracking-tight xl:leading-5 xl:tracking-wide"
-        >
-          {{ description }}
-        </p>
-        <div class="flex justify-center mt-2 md:justify-end">
-          <button
-            class="bg-blue-500 hover:bg-blue-700 flex items-center text-btn_text px-3 py-1 text-sm font-medium rounded-l-md"
-            aria-label="Accept Tracking"
-            @click="acceptTracking()"
+    <div
+      v-if="show"
+      class="bg-background rounded shadow-sm drop-shadow z-50 border-t-4 border-green-500 fixed inset-x-0 bottom-4 p-3 w-5/6 m-auto md:w-2/4 lg:w-1/3 xl:w-96 xl:right-4 xl:left-auto"
+    >
+      <div class="flex items-center justify-center gap-2 xl:gap-4">
+        <img
+          src="/google-analytics.png"
+          alt="google-analytics-logo"
+          class="flex-none self-center w-14 md:w-24"
+        />
+        <div class="flex-1">
+          <p
+            class="text-xs text-p_text leading-2 tracking-tight xl:leading-5 xl:tracking-wide"
           >
-            <AcceptIcon class="mr-1" /> {{ acceptButton }}
-          </button>
-          <button
-            class="bg-red-500 hover:bg-red-700 flex items-center text-btn_text px-3 py-1 text-sm font-medium rounded-r-md"
-            aria-label="Reject"
-            @click="reject"
-          >
-            <RejectIcon class="mr-1" /> {{ rejectButton }}
-          </button>
+            {{ description }}
+          </p>
+          <div class="flex justify-center mt-2 md:justify-end">
+            <button
+              class="bg-blue-500 hover:bg-blue-700 flex items-center text-btn_text px-3 py-1 text-sm font-medium rounded-l-md"
+              aria-label="Accept Tracking"
+              @click="acceptTracking()"
+            >
+              <AcceptIcon class="mr-1" /> {{ acceptButton }}
+            </button>
+            <button
+              class="bg-red-500 hover:bg-red-700 flex items-center text-btn_text px-3 py-1 text-sm font-medium rounded-r-md"
+              aria-label="Reject"
+              @click="reject"
+            >
+              <RejectIcon class="mr-1" /> {{ rejectButton }}
+            </button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </transition>
 </template>
