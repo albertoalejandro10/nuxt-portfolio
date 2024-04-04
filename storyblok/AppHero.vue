@@ -27,17 +27,17 @@ defineProps({
   </div>
   <!-- Contact and Social -->
   <div class="flex items-center justify-between mt-6">
-    <div v-if="blok.icons.length" class="flex gap-1">
+    <div v-if="blok.icons.length" class="flex gap-x-2">
       <component
         :is="icon.component"
         v-for="icon in blok.icons"
         :key="icon._uid"
         :blok="icon"
-        class="w-8 p-1 mr-1 transition-all bg-white rounded-md hover:bg-gray-600"
+        class="w-8 p-1 transition-all bg-white rounded-md hover:bg-gray-600"
       >
       </component>
     </div>
-    <div v-if="blok.buttons.length">
+    <div v-if="blok.buttons.length" class="flex gap-x-2">
       <component
         :is="button.component"
         v-for="button in blok.buttons"
