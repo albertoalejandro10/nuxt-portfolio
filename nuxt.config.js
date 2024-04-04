@@ -61,6 +61,11 @@ export default defineNuxtConfig({
     enabled: false,
     id: process.env.NUXT_PUBLIC_GTAG_ID,
   },
+  image: {
+    storyblok: {
+      baseURL: 'https://a.storyblok.com'
+    }
+  },
   site: {
     url: process.env.NUXT_PUBLIC_SITE_URL,
   },

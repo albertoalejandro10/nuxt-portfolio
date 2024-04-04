@@ -11,12 +11,13 @@ defineProps({
 <template>
   <div v-editable="blok">
     <div class="flex flex-col items-center gap-8">
-      <NuxtImg
+      <img
         :alt="blok.image.alt"
         :src="blok.image.filename"
         class="w-full rounded-lg"
-        width="386"
         height="218"
+        provider="storyblok"
+        width="386"
       />
       <div class="flex flex-col gap-6 md:w-5/6 items-left">
         <span class="text-2xl font-theme_bold text-head_text">{{

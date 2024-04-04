@@ -36,7 +36,7 @@ onMounted(() => {
     class="bg-background rounded shadow-sm drop-shadow z-50 border-t-4 border-green-500 fixed inset-x-0 bottom-4 p-3 w-5/6 m-auto md:w-2/4 lg:w-1/3 xl:w-96 xl:right-4 xl:left-auto"
   >
     <div class="flex items-center justify-center gap-2 xl:gap-4">
-      <NuxtImg
+      <img
         src="/google-analytics.png"
         alt="google-analytics-logo"
         class="flex-none self-center w-14 md:w-24"

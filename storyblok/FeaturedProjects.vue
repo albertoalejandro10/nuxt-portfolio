@@ -43,7 +43,8 @@ defineProps({
                     :key="filename"
                   >
                     <!-- Icons -->
-                    <NuxtImg
+                    <NuxtPicture
+                      provider="storyblok"
                       class="mx-1"
                       width="34"
                       height="34"
@@ -54,10 +55,11 @@ defineProps({
                 </div>
               </div>
             </div>
-            <NuxtImg
+            <img
+              provider="storyblok"
+              class="object-cover w-full aspect-square group-hover:scale-110 transition duration-300 ease-in-out"
               :alt="content.image.alt"
               :src="content.image.filename"
-              class="object-cover w-full aspect-square group-hover:scale-110 transition duration-300 ease-in-out"
             />
           </div>
           <div class="flex flex-col justify-between gap-4 lg:gap-5">

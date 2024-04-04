@@ -15,7 +15,8 @@ defineProps({
       :title="blok.link.title"
       :target="blok.link.target"
     >
-      <NuxtImg
+      <NuxtPicture
+        provider="storyblok"
         :src="blok.image.filename"
         :alt="blok.image.alt"
         width="24"
