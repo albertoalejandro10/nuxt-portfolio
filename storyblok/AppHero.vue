@@ -20,7 +20,7 @@ defineProps({
       <p class="text-sm leading-relaxed md:text-xl">
         {{ blok.subtitle }}
       </p>
-      <p class="text-sm text-justify leading-relaxed md:text-base">
+      <p class="text-sm leading-relaxed md:text-base">
         {{ blok.text }}
       </p>
     </div>
