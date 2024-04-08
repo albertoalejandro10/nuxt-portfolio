@@ -2,7 +2,7 @@
 import EnglishIcon from "./icons/EnglishIcon.vue"
 import SpanishIcon from "./icons/SpanishIcon.vue"
 
-const { locale, setLocale } = useI18n()
+const { locale, setLocale, t } = useI18n()
 
 const switchLanguage = (lang) => {
   setLocale(lang)
@@ -13,6 +13,9 @@ const getLanguageButtonClasses = (lang) => {
     "inline-flex items-center px-2 py-2 text-xs font-medium text-center text-white focus:ring-2 focus:outline-none hover:bg-green-800 focus:ring-green-800 first:rounded-l-md first:rounded-r-none last:rounded-r-md last:rounded-l-none"
   return locale.value === lang ? `${baseClasses} active` : baseClasses
 }
+
+const english = computed(() => t("ChangeLanguague.english"))
+const spanish = computed(() => t("ChangeLanguague.spanish"))
 </script>
 
 <template>
@@ -23,7 +26,7 @@ const getLanguageButtonClasses = (lang) => {
       @click="switchLanguage('en')"
     >
       <EnglishIcon class="mr-1" />
-      <span>English</span>
+      <span>{{ english }}</span>
     </button>
     <button
       aria-label="Switch to Spanish"
@@ -31,7 +34,7 @@ const getLanguageButtonClasses = (lang) => {
       @click="switchLanguage('es')"
     >
       <SpanishIcon class="mr-1" />
-      <span>Spanish</span>
+      <span>{{ spanish }}</span>
     </button>
   </div>
 </template>

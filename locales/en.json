@@ -12,5 +12,9 @@
   "AppFooter": {
     "credits": "Credits for the main design to",
     "madeWith": "Made with ❤️ by"
+  },
+  "ChangeLanguague": {
+    "english": "English",
+    "spanish": "Spanish"
   }
 }
