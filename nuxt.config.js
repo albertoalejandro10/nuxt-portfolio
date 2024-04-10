@@ -63,8 +63,8 @@ export default defineNuxtConfig({
   },
   image: {
     storyblok: {
-      baseURL: 'https://a.storyblok.com'
-    }
+      baseURL: "https://a.storyblok.com",
+    },
   },
   site: {
     url: process.env.NUXT_PUBLIC_SITE_URL,

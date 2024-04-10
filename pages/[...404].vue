@@ -1,3 +1,15 @@
+<script setup>
+import { useRouter } from "vue-router"
+
+// Methods are just functions
+const router = useRouter()
+const { locale } = useI18n()
+const language = locale.value !== "en" ? "es" : ""
+const redirectToHome = () => {
+  router.push(`/${language}`)
+}
+</script>
+
 <template>
   <div class="flex flex-col items-center gap-4 mt-40">
     <h1
@@ -14,15 +26,3 @@
     </button>
   </div>
 </template>
-
-<script setup>
-import { useRouter } from "vue-router"
-
-// Methods are just functions
-const router = useRouter()
-const { locale } = useI18n()
-const language = locale.value !== "en" ? "es" : ""
-const redirectToHome = () => {
-  router.push(`/${language}`)
-}
-</script>
