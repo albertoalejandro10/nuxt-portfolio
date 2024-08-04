@@ -12,7 +12,7 @@ const madeWith = computed(() => t("AppFooter.madeWith"))
     {{ credits }}
     <a
       class="hover:text-link_text_hover tracking-wider"
-      href="https://github.com/mightykillrr/"
+      href="https://github.com/aniketkotal"
       target="_blank"
     >
       Aniket Kotal</a
