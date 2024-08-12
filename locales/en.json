@@ -16,5 +16,8 @@
   "ChangeLanguague": {
     "english": "English",
     "spanish": "Spanish"
+  },
+  "FeaturedProjects": {
+    "description": "Description"
   }
 }

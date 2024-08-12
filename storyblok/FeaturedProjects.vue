@@ -1,4 +1,6 @@
 <script setup>
+import { format } from "@formkit/tempo"
+
 const localePath = useLocalePath()
 defineProps({
   blok: {
@@ -7,6 +9,17 @@ defineProps({
     default: () => ({}),
   },
 })
+
+import GitHubIcon from "@/components/icons/GitHubIcon.vue"
+import InternetIcon from "@/components/icons/InternetIcon.vue"
+import ArrowRightIcon from "@/components/icons/ArrowRightIcon.vue"
+
+const { t } = useI18n()
+const formatDate = (date) => {
+  return format(date, "MMMM D, YYYY", t.value)
+}
+
+const description = computed(() => t("FeaturedProjects.description"))
 </script>
 
 <template>
@@ -19,57 +32,68 @@ defineProps({
       <p>{{ blok.subtitle }}</p>
       <div
         v-if="blok.projects?.length"
-        class="grid grid-cols-1 pt-8 mx-auto lg:grid-cols-2 gap-7 sm:gap-6 sm:w-5/6 lg:w-full"
+        class="grid grid-cols-1 pt-8 mx-auto lg:grid-cols-2 gap-7 sm:gap-4 sm:w-5/6 lg:w-full"
       >
-        <NuxtLink
+        <div
           v-for="{ uuid, content } in blok.projects"
           :key="uuid"
-          :to="localePath('/projects')"
-          class="flex flex-col w-full p-6 py-6 lg:p-6 lg:py-10 items-center gap-8 rounded-md bg-item_back hover:bg-item_hover_back transition-colors border-[1px] border-border_sm"
+          class="flex flex-col justify-between gap-4 lg:gap-5 overflow-hidden rounded border-[1px] border-border_sm p-4 sm:p-6 lg:p-8 bg-item_back hover:bg-item_hover_back transition-colors duration-300 ease-in-out"
         >
-          <div class="overflow-hidden aspect-video rounded-xl relative group">
-            <div
-              class="rounded-xl z-10 opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out absolute from-black to-transparent bg-gradient-to-t inset-x-0 -bottom-2 pt-30 flex items-end"
-            >
-              <div>
-                <div
-                  class="flex items-center p-4 text-xl group-hover:opacity-100 group-hover:translate-y-0 translate-y-4 pb-6 transform transition duration-300 ease-in-out"
-                >
-                  <div class="text-head_text">
-                    {{ content.technologies }}
-                  </div>
-                  <div
-                    v-for="{ alt, filename } in content.icons"
-                    :key="filename"
-                  >
-                    <!-- Icons -->
-                    <NuxtPicture
-                      provider="storyblok"
-                      class="mx-1"
-                      width="34"
-                      height="34"
-                      :src="filename"
-                      :alt="alt"
-                    />
-                  </div>
-                </div>
-              </div>
+          <div class="flex flex-col gap-1">
+            <h2 class="text-base text-head_text lg:text-lg">
+              {{ content.name }}
+            </h2>
+            <div class="flex gap-2 gap-x-1">
+              <NuxtPicture
+                v-for="{ alt, filename } in content.icons"
+                :key="filename"
+                provider="storyblok"
+                width="24"
+                height="24"
+                :src="filename"
+                :alt="alt"
+              />
             </div>
-            <img
-              provider="storyblok"
-              class="object-cover w-full aspect-square group-hover:scale-110 transition duration-300 ease-in-out"
-              :alt="content.image.alt"
-              :src="content.image.filename"
-            />
           </div>
-          <div class="flex flex-col justify-between gap-4 lg:gap-5">
-            <span class="text-lg text-head_text lg:text-xl">{{
-              content.name
-            }}</span>
-            <p class="text-sm md:text-base">{{ content.description }}</p>
-          </div></NuxtLink
-        >
+          <div class="flex justify-between gap-4 lg:gap-5">
+            <dl class="flex">
+              <div class="flex flex-col-reverse">
+                <dt class="text-sm font-medium">{{ content.isPublished }}</dt>
+                <dd class="text-xs text-gray-500 date">
+                  {{ formatDate(content.publishedDate) }}
+                </dd>
+              </div>
+            </dl>
+            <div class="flex gap-x-1">
+              <a
+                :href="content.buttons[0].link.cached_url"
+                class="flex items-center border-[1px] border-link_border px-1 py-1 rounded text-btn_text text-sm hover:bg-border_sm transition-colors md:px-2 w-fit"
+              >
+                <GitHubIcon class="w-5 h-5" />
+              </a>
+              <a
+                v-if="content.buttons[1]"
+                :href="content.buttons[1].link.cached_url"
+                class="flex items-center border-[1px] border-link_border px-1 py-1 rounded text-btn_text text-sm hover:bg-border_sm transition-colors md:px-2 w-fit"
+              >
+                <InternetIcon class="w-5 h-5" />
+              </a>
+              <NuxtLink
+                :to="localePath('/projects')"
+                class="flex items-center border-[1px] border-link_border px-1 py-1 rounded text-btn_text text-sm hover:bg-border_sm transition-colors md:px-2 w-fit"
+              >
+                {{ description }} <ArrowRightIcon class="ml-[0.5px] w-5 h-5" />
+              </NuxtLink>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </template>
+
+<style scoped>
+.date {
+  text-transform: capitalize;
+}
+</style>

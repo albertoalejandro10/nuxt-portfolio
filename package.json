@@ -26,6 +26,7 @@
     "typescript": "5.4.3"
   },
   "dependencies": {
+    "@formkit/tempo": "0.1.2",
     "@storyblok/nuxt": "6.0.6",
     "vue-dompurify-html": "5.0.1"
   },
