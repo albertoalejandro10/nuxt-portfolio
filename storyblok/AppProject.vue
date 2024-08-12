@@ -10,21 +10,38 @@ defineProps({
 
 <template>
   <div v-editable="blok">
-    <div class="flex flex-col items-center gap-8">
-      <img
-        :alt="blok.image.alt"
-        :src="blok.image.filename"
-        class="w-full rounded-lg"
-        height="218"
-        provider="storyblok"
-        width="386"
-      />
-      <div class="flex flex-col gap-6 md:w-5/6 items-left">
+    <div class="flex flex-col items-center gap-4 lg:gap-8">
+      <div class="flex flex-col items-center gap-2">
+        <img
+          :alt="blok.image.alt"
+          :src="blok.image.filename"
+          class="w-full rounded-lg"
+          height="218"
+          provider="storyblok"
+          width="386"
+        />
+        <div
+          class="flex flex-row items-center flex-wrap gap-y-2 gap-x-1 sm:gap-x-2"
+        >
+          <strong class="text-xs lg:text-sm text-gray-400">Stack:</strong>
+          <NuxtPicture
+            v-for="{ alt, filename } in blok.icons"
+            :key="filename"
+            provider="storyblok"
+            class="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8"
+            :src="filename"
+            :alt="alt"
+          />
+        </div>
+      </div>
+      <div class="flex flex-col gap-4 md:w-5/6 items-left">
         <span class="text-2xl font-theme_bold text-head_text">{{
           blok.name
         }}</span>
-        <p class="text-sm lg:text-lg">{{ blok.description }}</p>
-        <div v-if="blok.buttons.length" class="flex gap-4">
+        <p class="text-sm lg:text-lg">
+          {{ blok.description }}
+        </p>
+        <div v-if="blok.buttons.length" class="flex gap-x-1 sm:gap-x-2">
           <component
             :is="button.component"
             v-for="button in blok.buttons"
