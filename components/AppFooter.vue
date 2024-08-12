@@ -7,7 +7,7 @@ const madeWith = computed(() => t("AppFooter.madeWith"))
 <template>
   <!-- Attribution -->
   <div
-    class="w-full text-center max-w-screen-xl px-8 py-6 pb-24 mx-auto mt-14 sm:px-16 lg:px-24 lg:mt-20"
+    class="w-full text-center max-w-screen-xl px-8 py-6 pb-24 mx-auto mt-14 text-xs xs:text-sm lg:text-base sm:px-16 lg:px-24 lg:mt-20"
   >
     {{ credits }}
     <a

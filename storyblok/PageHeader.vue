@@ -16,7 +16,7 @@ defineProps({
       {{ blok.title }}<span class="text-link_text_hover">.</span>
     </h1>
     <p
-      class="-mt-2 text-sm leading-relaxed md:text-base lg:text-lg sg:leading-8"
+      class="mt-2 text-sm leading-relaxed md:text-base lg:text-lg sg:leading-8"
     >
       {{ blok.subtitle }}
     </p>

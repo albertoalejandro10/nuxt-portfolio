@@ -25,16 +25,16 @@ const spanish = computed(() => t("ChangeLanguague.spanish"))
       :class="getLanguageButtonClasses('en')"
       @click="switchLanguage('en')"
     >
-      <EnglishIcon class="mr-1" />
-      <span>{{ english }}</span>
+      <EnglishIcon />
+      <span class="hidden ml-1 xs:block">{{ english }}</span>
     </button>
     <button
       aria-label="Switch to Spanish"
       :class="getLanguageButtonClasses('es')"
       @click="switchLanguage('es')"
     >
-      <SpanishIcon class="mr-1" />
-      <span>{{ spanish }}</span>
+      <SpanishIcon />
+      <span class="hidden ml-1 xs:block">{{ spanish }}</span>
     </button>
   </div>
 </template>

@@ -25,21 +25,21 @@ const projects = computed(() => t("AppNavBar.projects"))
       <div class="flex items-center gap-1 text-sm sm:gap-2">
         <NuxtLink :to="localePath('/')">
           <span
-            class="flex items-center text-xs px-3 transition-all rounded-md hover:bg-action-back hover:text-green-600 sm:px-6 sm:py-2 md:font-semibold md:text-base lg:text-sm"
+            class="flex items-center text-xs px-2 transition-all rounded-md hover:bg-action-back hover:text-green-600 sm:px-6 sm:py-2 md:font-semibold md:text-base lg:text-sm"
           >
             {{ home }}
           </span>
         </NuxtLink>
         <NuxtLink :to="localePath('/about')">
           <span
-            class="flex items-center text-xs px-3 transition-all rounded-md hover:bg-action-back hover:text-green-600 sm:px-6 sm:py-2 md:font-semibold md:text-base lg:text-sm"
+            class="flex items-center text-xs px-2 transition-all rounded-md hover:bg-action-back hover:text-green-600 sm:px-6 sm:py-2 md:font-semibold md:text-base lg:text-sm"
           >
             {{ about }}
           </span>
         </NuxtLink>
         <NuxtLink :to="localePath('/projects')">
           <span
-            class="flex items-center text-xs px-3 transition-all rounded-md hover:bg-action-back hover:text-green-600 sm:px-6 sm:py-2 md:font-semibold md:text-base lg:text-sm"
+            class="flex items-center text-xs px-2 transition-all rounded-md hover:bg-action-back hover:text-green-600 sm:px-6 sm:py-2 md:font-semibold md:text-base lg:text-sm"
           >
             {{ projects }}
           </span>

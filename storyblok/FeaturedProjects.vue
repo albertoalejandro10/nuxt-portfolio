@@ -26,7 +26,7 @@ const description = computed(() => t("FeaturedProjects.description"))
   <div v-editable="blok">
     <!-- Featured projects -->
     <div class="flex flex-col gap-2 lg:gap-2">
-      <h2 class="text-base md:text-2xl lg:text-4xl text-head_text">
+      <h2 class="text-xl md:text-2xl lg:text-4xl text-head_text">
         {{ blok.title }}
       </h2>
       <p>{{ blok.subtitle }}</p>
@@ -43,7 +43,7 @@ const description = computed(() => t("FeaturedProjects.description"))
             <h2 class="text-base text-head_text lg:text-lg">
               {{ content.name }}
             </h2>
-            <div class="flex gap-2 gap-x-1">
+            <div class="flex flex-row flex-wrap gap-y-2 gap-x-1">
               <NuxtPicture
                 v-for="{ alt, filename } in content.icons"
                 :key="filename"
@@ -55,7 +55,9 @@ const description = computed(() => t("FeaturedProjects.description"))
               />
             </div>
           </div>
-          <div class="flex justify-between gap-4 lg:gap-5">
+          <div
+            class="flex flex-col gap-2 xs:flex-row xs:justify-between xs:gap-4 lg:gap-5"
+          >
             <dl class="flex">
               <div class="flex flex-col-reverse">
                 <dt class="text-sm font-medium">{{ content.isPublished }}</dt>
