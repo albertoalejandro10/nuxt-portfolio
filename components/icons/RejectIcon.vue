@@ -16,9 +16,3 @@
     <path d="M5.7 5.7l12.6 12.6" />
   </svg>
 </template>
-
-<script>
-export default {
-  name: "RejectIcon",
-}
-</script>

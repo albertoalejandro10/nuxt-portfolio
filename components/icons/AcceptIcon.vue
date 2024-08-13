@@ -16,9 +16,3 @@
     <path d="M9 12l2 2l4 -4" />
   </svg>
 </template>
-
-<script>
-export default {
-  name: "AcceptIcon",
-}
-</script>

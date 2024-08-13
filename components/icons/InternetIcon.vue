@@ -19,9 +19,3 @@
     </g>
   </svg>
 </template>
-
-<script>
-export default {
-  name: "InternetIcon",
-}
-</script>

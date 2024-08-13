@@ -101,9 +101,3 @@
     />
   </svg>
 </template>
-
-<script>
-export default {
-  name: "SpanishIcon",
-}
-</script>

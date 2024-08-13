@@ -49,9 +49,3 @@
     />
   </svg>
 </template>
-
-<script>
-export default {
-  name: "EnglishIcon",
-}
-</script>
