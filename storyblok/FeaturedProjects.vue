@@ -1,7 +1,10 @@
 <script setup>
 import { format } from "@formkit/tempo"
 
-const localePath = useLocalePath()
+import GitHubIcon from "@/components/icons/GitHubIcon.vue"
+import InternetIcon from "@/components/icons/InternetIcon.vue"
+import ArrowRightIcon from "@/components/icons/ArrowRightIcon.vue"
+
 defineProps({
   blok: {
     type: Object,
@@ -10,13 +13,16 @@ defineProps({
   },
 })
 
-import GitHubIcon from "@/components/icons/GitHubIcon.vue"
-import InternetIcon from "@/components/icons/InternetIcon.vue"
-import ArrowRightIcon from "@/components/icons/ArrowRightIcon.vue"
-
-const { t } = useI18n()
+const { t, locale } = useI18n()
 const formatDate = (date) => {
-  return format(date, "MMMM D, YYYY", t.value)
+  // Formatear la fecha en función del idioma actual
+  const localeMapping = {
+    en: "en-US",
+    es: "es-ES",
+  }
+
+  const currentLocale = localeMapping[locale.value] || "en-US"
+  return format(date, "MMMM D, YYYY", currentLocale)
 }
 
 const description = computed(() => t("FeaturedProjects.description"))
