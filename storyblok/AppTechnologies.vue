@@ -20,3 +20,9 @@ defineProps({
     </div>
   </div>
 </template>
+
+<style scoped>
+img {
+  pointer-events: none;
+}
+</style>
