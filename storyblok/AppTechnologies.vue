@@ -16,7 +16,16 @@ defineProps({
       >
         {{ blok.title }}
       </h3>
-      <img :src="blok.technologies.cached_url" alt="skillicons" />
+      <img
+        :src="blok.technologies.cached_url"
+        alt="skillicons"
+        class="hidden sm:block"
+      />
+      <img
+        :src="blok.mobileTechnologies.cached_url"
+        alt="skillicons"
+        class="block sm:hidden"
+      />
     </div>
   </div>
 </template>
