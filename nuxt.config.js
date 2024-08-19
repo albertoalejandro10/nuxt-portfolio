@@ -58,13 +58,12 @@ export default defineNuxtConfig({
     lazy: true,
     langDir: "locales/",
     defaultLocale: "en",
-    strategy: "prefix_except_default",
+    strategy: "prefix_and_default",
     detectBrowserLanguage: {
-      useCookie: true,
-      cookieKey: "i18n_redirected",
-      alwaysRedirect: true,
+      useCookie: false,
+      alwaysRedirect: false,
       fallbackLocale: "en",
-      redirectOn: "no prefix",
+      redirectOn: "root",
     },
   },
   gtag: {
