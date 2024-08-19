@@ -22,6 +22,9 @@ export default defineNuxtConfig({
       ],
     },
   },
+  experimental: {
+    suspense: false,
+  },
   modules: [
     "nuxt-gtag",
     "@nuxt/image",
@@ -56,6 +59,13 @@ export default defineNuxtConfig({
     langDir: "locales/",
     defaultLocale: "en",
     strategy: "prefix_except_default",
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: "i18n_redirected",
+      alwaysRedirect: true,
+      fallbackLocale: "en",
+      redirectOn: "no prefix",
+    },
   },
   gtag: {
     enabled: false,
