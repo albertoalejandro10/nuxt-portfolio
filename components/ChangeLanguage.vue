@@ -16,6 +16,14 @@ const getLanguageButtonClasses = (lang) => {
 
 const english = computed(() => t("ChangeLanguague.english"))
 const spanish = computed(() => t("ChangeLanguague.spanish"))
+
+onMounted(() => {
+  const languageCookie = useCookie("i18n_redirected")
+  const storedLanguage = languageCookie.value
+  if (storedLanguage) {
+    setLocale(storedLanguage)
+  }
+})
 </script>
 
 <template>
