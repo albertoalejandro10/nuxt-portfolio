@@ -15,7 +15,7 @@ const madeWith = computed(() => t("AppFooter.madeWith"))
       href="https://github.com/aniketkotal"
       target="_blank"
     >
-      Aniket Kotal</a
+      AniketKotal</a
     >
     <br />
     {{ madeWith }}

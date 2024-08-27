@@ -1,5 +1,5 @@
 <script setup>
-import { computed, useAttrs } from "vue"
+import { computed, useAttrs } from 'vue'
 const props = defineProps({
   blok: {
     type: Object,
@@ -9,7 +9,7 @@ const props = defineProps({
 })
 const richText = computed(() => renderRichText(props.blok.text))
 const defaultCSSClasses =
-  "flex flex-col w-full gap-6 mx-auto lg:gap-9 md:w-10/12"
+  'flex flex-col w-full gap-6 mx-auto lg:gap-9 md:w-10/12'
 const attrs = useAttrs()
 const cssClasses = computed(() => attrs.class || defaultCSSClasses)
 </script>

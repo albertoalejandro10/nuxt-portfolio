@@ -3,13 +3,13 @@ useHead({
   titleTemplate: (titleChunk) => {
     return titleChunk
       ? `${titleChunk} - albertoalejandrodev`
-      : "albertoalejandrodev"
+      : 'albertoalejandrodev'
   },
   meta: [
     {
-      name: "Portfolio",
+      name: 'Portfolio',
       content:
-        "Alberto Alejandro info, about, projects, goals, studies and jobs.",
+        'Alberto Alejandro info, about, projects, goals, studies and jobs.',
     },
   ],
 })

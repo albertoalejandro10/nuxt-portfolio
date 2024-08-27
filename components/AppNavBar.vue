@@ -1,11 +1,11 @@
 <script setup>
-import ChangeLanguage from "./ChangeLanguage.vue"
+import ChangeLanguage from './ChangeLanguage.vue'
 const localePath = useLocalePath()
 
 const { t } = useI18n()
-const home = computed(() => t("AppNavBar.home"))
-const about = computed(() => t("AppNavBar.about"))
-const projects = computed(() => t("AppNavBar.projects"))
+const home = computed(() => t('AppNavBar.home'))
+const about = computed(() => t('AppNavBar.about'))
+const projects = computed(() => t('AppNavBar.projects'))
 </script>
 
 <template>
@@ -15,13 +15,12 @@ const projects = computed(() => t("AppNavBar.projects"))
       class="bottom-0 z-20 px-3 py-3 flex justify-evenly items-center border-b-[1px] border-border_sm fixed w-full bg-navbar_back backdrop-blur-sm sm:top-0 sm:bottom-auto sm:px-6 lg:py-4"
     >
       <div class="h-[1px] top-0 absolute left-0 w-full bg-topbar lg:h-1"></div>
-      <a
-        aria-current="page"
-        href="/"
+      <NuxtLink
+        :to="localePath('/')"
         class="hidden text-3xl font-normal select-none router-link-active router-link-exact-active sm:block lg:text-4xl"
       >
         <NuxtPicture src="/logo.svg" alt="logo" width="170" height="40" />
-      </a>
+      </NuxtLink>
       <div class="flex items-center gap-1 text-sm sm:gap-2">
         <NuxtLink :to="localePath('/')">
           <span

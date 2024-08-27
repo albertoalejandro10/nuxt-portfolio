@@ -43,7 +43,7 @@ const description = computed(() => t("FeaturedProjects.description"))
         <div
           v-for="{ uuid, content } in blok.projects"
           :key="uuid"
-          class="flex flex-col justify-between gap-4 lg:gap-5 overflow-hidden rounded border-[1px] border-border_sm p-4 sm:p-6 lg:p-8 bg-item_back hover:bg-item_hover_back transition-colors duration-300 ease-in-out"
+          class="flex flex-col justify-between gap-4 lg:gap-5 overflow-hidden p-4 sm:p-6 lg:p-8 [background:linear-gradient(#161616,#161616)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.green.900/.48)_80%,_theme(colors.green.800)_86%,_theme(colors.green.700)_90%,_theme(colors.green.800)_94%,_theme(colors.green.900/.48))_border-box] rounded-md border border-transparent animate-border"
         >
           <div class="flex flex-col gap-1">
             <h2 class="text-base text-head_text lg:text-lg">
@@ -103,5 +103,11 @@ const description = computed(() => t("FeaturedProjects.description"))
 <style scoped>
 .date {
   text-transform: capitalize;
+}
+
+@property --border-angle {
+  inherits: false;
+  initial-value: 0deg;
+  syntax: "<angle>";
 }
 </style>

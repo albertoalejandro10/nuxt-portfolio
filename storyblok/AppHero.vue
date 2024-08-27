@@ -9,15 +9,15 @@ defineProps({
 </script>
 
 <template>
+  <!-- Hero -->
   <div v-editable="blok">
-    <!-- Hero -->
     <div class="flex flex-col gap-7">
       <h1
-        class="text-xl leading-loose tracking-wider sm:text-4xl md:text-5xl xl:text-7xl text-head_text"
+        class="text-xl leading-loose tracking-wider sm:text-4xl md:text-5xl xl:text-7xl animate-text-gradient bg-gradient-to-r from-green-800 via-green-600 to-green-400 bg-[200%_auto] bg-clip-text text-transparent"
       >
-        {{ blok.title }}<span class="text-link_text_hover">,</span>
+        {{ blok.title }}<span>,</span>
       </h1>
-      <p class="text-sm leading-relaxed md:text-xl">
+      <p class="text-base leading-relaxed md:text-xl">
         {{ blok.subtitle }}
       </p>
       <p class="text-sm leading-relaxed md:text-base">
