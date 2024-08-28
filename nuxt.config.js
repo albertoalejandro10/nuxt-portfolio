@@ -1,6 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   app: {
+    pageTransition: {
+      name: "page",
+      mode: "out-in",
+    },
     head: {
       charset: "utf-16",
       viewport: "initial-scale=1, maximum-scale=5, width=device-width",

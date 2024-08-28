@@ -1,4 +1,6 @@
 <script setup>
+import LogoIcon from '@/components/icons/LogoIcon.vue'
+
 defineProps({
   blok: {
     type: Object,
@@ -12,7 +14,7 @@ const { isMobile, isDesktopOrTablet } = useDevice()
 
 <template>
   <div class="flex justify-center" v-if="isMobile && !isDesktopOrTablet">
-    <img src="/icon-logo.svg" alt="logo" class="w-24 h-24 object-cover" />
+    <LogoIcon class="w-24 h-24 object-cover" />
   </div>
   <!-- Hero -->
   <div v-editable="blok">
