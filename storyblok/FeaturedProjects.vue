@@ -1,10 +1,11 @@
 <script setup>
-import { format } from "@formkit/tempo"
+import { format } from '@formkit/tempo'
 
-import GitHubIcon from "@/components/icons/GitHubIcon.vue"
-import InternetIcon from "@/components/icons/InternetIcon.vue"
-import ArrowRightIcon from "@/components/icons/ArrowRightIcon.vue"
+import GitHubIcon from '@/components/icons/GitHubIcon.vue'
+import InternetIcon from '@/components/icons/InternetIcon.vue'
+import ArrowRightIcon from '@/components/icons/ArrowRightIcon.vue'
 
+const localePath = useLocalePath()
 defineProps({
   blok: {
     type: Object,
@@ -13,19 +14,23 @@ defineProps({
   },
 })
 
+const processName = (name) => {
+  return name.replaceAll(' ', '-')
+}
+
 const { t, locale } = useI18n()
 const formatDate = (date) => {
   // Formatear la fecha en función del idioma actual
   const localeMapping = {
-    en: "en-US",
-    es: "es-ES",
+    en: 'en-US',
+    es: 'es-ES',
   }
 
-  const currentLocale = localeMapping[locale.value] || "en-US"
-  return format(date, "MMMM D, YYYY", currentLocale)
+  const currentLocale = localeMapping[locale.value] || 'en-US'
+  return format(date, 'MMMM D, YYYY', currentLocale)
 }
 
-const description = computed(() => t("FeaturedProjects.description"))
+const description = computed(() => t('FeaturedProjects.description'))
 </script>
 
 <template>
@@ -39,13 +44,14 @@ const description = computed(() => t("FeaturedProjects.description"))
       <div
         v-if="blok.projects?.length"
         class="grid grid-cols-1 pt-8 mx-auto lg:grid-cols-2 gap-7 sm:gap-4 sm:w-5/6 lg:w-full"
+        style="grid-auto-rows: 1fr"
       >
         <div
           v-for="{ uuid, content } in blok.projects"
           :key="uuid"
-          class="flex flex-col justify-between gap-4 lg:gap-5 overflow-hidden p-4 sm:p-6 lg:p-8 [background:linear-gradient(#161616,#161616)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.green.900/.48)_80%,_theme(colors.green.800)_86%,_theme(colors.green.700)_90%,_theme(colors.green.800)_94%,_theme(colors.green.900/.48))_border-box] rounded-md border border-transparent animate-border"
+          class="flex flex-col justify-between gap-4 lg:gap-5 overflow-hidden p-4 sm:p-6 lg:p-6 [background:linear-gradient(#161616,#161616)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.green.900/.48)_80%,_theme(colors.green.800)_86%,_theme(colors.green.700)_90%,_theme(colors.green.800)_94%,_theme(colors.green.900/.48))_border-box] rounded-md border border-transparent animate-border h-full"
         >
-          <div class="flex flex-col gap-1">
+          <div class="flex flex-col flex-grow gap-1">
             <h2 class="text-base text-head_text lg:text-lg">
               {{ content.name }}
             </h2>
@@ -87,7 +93,7 @@ const description = computed(() => t("FeaturedProjects.description"))
                 <InternetIcon class="w-5 h-5" />
               </a>
               <NuxtLink
-                :to="localePath('/projects')"
+                :to="localePath(`/projects#${processName(content.name)}`)"
                 class="flex items-center border-[1px] border-link_border px-1 py-1 rounded text-btn_text text-sm hover:bg-border_sm transition-colors md:px-2 w-fit"
               >
                 {{ description }} <ArrowRightIcon class="ml-[0.5px] w-5 h-5" />
@@ -108,6 +114,6 @@ const description = computed(() => t("FeaturedProjects.description"))
 @property --border-angle {
   inherits: false;
   initial-value: 0deg;
-  syntax: "<angle>";
+  syntax: '<angle>';
 }
 </style>

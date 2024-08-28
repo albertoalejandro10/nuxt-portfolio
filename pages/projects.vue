@@ -1,12 +1,12 @@
 <script setup>
 const { locale } = useI18n()
-const story = await useAsyncStoryblok("projects", {
+const story = await useAsyncStoryblok('projects', {
   language: locale.value,
-  version: "draft",
+  version: 'draft',
 })
 useHead({
   title: story.value.name,
-  meta: [{ name: "Projects", content: "Alberto Alejandro explained projects" }],
+  meta: [{ name: 'Projects', content: 'Alberto Alejandro explained projects' }],
 })
 </script>
 

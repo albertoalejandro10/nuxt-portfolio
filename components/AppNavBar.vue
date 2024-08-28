@@ -12,7 +12,7 @@ const projects = computed(() => t('AppNavBar.projects'))
   <Teleport to="body">
     <!-- Navbar -->
     <nav
-      class="bottom-0 z-20 px-3 py-3 flex justify-evenly items-center border-b-[1px] border-border_sm fixed w-full bg-navbar_back backdrop-blur-sm sm:top-0 sm:bottom-auto sm:px-6 lg:py-4"
+      class="fixed bottom-0 z-20 px-3 py-3 flex justify-evenly items-center border-b-[1px] border-border_sm w-full backdrop-blur-sm backdrop-filter sm:top-0 sm:bottom-auto sm:px-6 lg:py-4"
     >
       <div class="h-[1px] top-0 absolute left-0 w-full bg-topbar lg:h-1"></div>
       <NuxtLink

@@ -6,19 +6,21 @@ defineProps({
     default: () => ({}),
   },
 })
+
+const processName = (name) => {
+  return name.replaceAll(' ', '-')
+}
 </script>
 
 <template>
-  <div v-editable="blok">
-    <div class="flex flex-col items-center gap-4 lg:gap-8">
+  <div v-editable="blok" :id="processName(blok.name)">
+    <div class="flex flex-col items-center gap-4 lg:gap-6">
       <div class="flex flex-col items-center gap-2">
         <img
           :alt="blok.image.alt"
           :src="blok.image.filename"
           class="w-full rounded-lg"
-          height="218"
           provider="storyblok"
-          width="386"
         />
         <div
           class="flex flex-row items-center flex-wrap gap-y-2 gap-x-1 sm:gap-x-2"
