@@ -22,14 +22,16 @@ export default defineNuxtConfig({
       ],
     },
   },
+
   experimental: {
     suspense: false,
   },
+
   modules: [
     "nuxt-gtag",
     "@nuxt/image",
     "@nuxtjs/i18n",
-    "nuxt-simple-sitemap",
+    "@nuxtjs/sitemap",
     ["@nuxtjs/device", {
       refreshOnResize: true,
     }],
@@ -45,6 +47,7 @@ export default defineNuxtConfig({
       },
     ],
   ],
+
   i18n: {
     locales: [
       {
@@ -69,23 +72,30 @@ export default defineNuxtConfig({
       redirectOn: "root",
     },
   },
+
   gtag: {
     enabled: false,
     id: process.env.NUXT_PUBLIC_GTAG_ID,
   },
+
   image: {
     storyblok: {
       baseURL: "https://a.storyblok.com",
     },
   },
+
   site: {
     url: process.env.NUXT_PUBLIC_SITE_URL,
   },
+
   runtimeConfig: {
     public: {
       siteUrl:
         process.env.NUXT_PUBLIC_SITE_URL ||
         "https://albertoalejandro10.netlify.app",
+      name: 'Alberto Alejandro'
     },
   },
+
+  compatibilityDate: "2024-08-27",
 })
