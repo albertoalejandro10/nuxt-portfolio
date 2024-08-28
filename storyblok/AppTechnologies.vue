@@ -6,6 +6,8 @@ defineProps({
     default: () => ({}),
   },
 })
+
+const { isMobile, isDesktopOrTablet } = useDevice()
 </script>
 
 <template>
@@ -19,12 +21,12 @@ defineProps({
       <img
         :src="blok.technologies.cached_url"
         alt="skillicons"
-        class="hidden sm:block"
+        v-if="isDesktopOrTablet"
       />
       <img
         :src="blok.mobileTechnologies.cached_url"
         alt="skillicons"
-        class="block sm:hidden"
+        v-if="isMobile"
       />
     </div>
   </div>

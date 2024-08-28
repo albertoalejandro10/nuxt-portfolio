@@ -13,7 +13,7 @@ export default defineNuxtConfig({
         },
       ],
       link: [
-        { rel: "icon", href: "/favicon.svg" },
+        { rel: "icon", href: "/icon-logo.svg" },
         {
           rel: "preconnect",
           href: "https://fonts.gstatic.com",
@@ -30,6 +30,9 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@nuxtjs/i18n",
     "nuxt-simple-sitemap",
+    ["@nuxtjs/device", {
+      refreshOnResize: true,
+    }],
     "@nuxtjs/tailwindcss",
     [
       "@storyblok/nuxt",

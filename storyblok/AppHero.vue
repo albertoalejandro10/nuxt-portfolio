@@ -6,14 +6,19 @@ defineProps({
     default: () => ({}),
   },
 })
+
+const { isMobile, isDesktopOrTablet } = useDevice()
 </script>
 
 <template>
+  <div class="flex justify-center" v-if="isMobile && !isDesktopOrTablet">
+    <img src="/icon-logo.svg" alt="logo" class="w-24 h-24 object-cover" />
+  </div>
   <!-- Hero -->
   <div v-editable="blok">
     <div class="flex flex-col gap-7">
       <h1
-        class="text-xl leading-loose tracking-wider sm:text-4xl md:text-5xl xl:text-7xl animate-text-gradient bg-gradient-to-r from-green-800 via-green-600 to-green-400 bg-[200%_auto] bg-clip-text text-transparent"
+        class="text-2xl leading-loose tracking-wider sm:text-4xl md:text-5xl xl:text-7xl animate-text-gradient bg-gradient-to-r from-green-800 via-green-600 to-green-400 bg-[200%_auto] bg-clip-text text-transparent"
       >
         {{ blok.title }}<span>,</span>
       </h1>
