@@ -1,5 +1,5 @@
 <script setup>
-import { useAttrs, computed } from "vue"
+import { useAttrs, computed } from 'vue'
 defineProps({
   blok: {
     type: Object,
@@ -8,7 +8,7 @@ defineProps({
   },
 })
 
-const defaultCSSClasses = "object-cover w-full h-auto rounded-xl mb-10"
+const defaultCSSClasses = 'object-cover w-full h-auto rounded-md mb-10'
 const attrs = useAttrs()
 const cssClasses = computed(() => attrs.class || defaultCSSClasses)
 </script>

@@ -14,10 +14,6 @@ defineProps({
   },
 })
 
-const processName = (name) => {
-  return name.replaceAll(' ', '-')
-}
-
 const { t, locale } = useI18n()
 const formatDate = (date) => {
   // Formatear la fecha en función del idioma actual
@@ -93,7 +89,7 @@ const description = computed(() => t('FeaturedProjects.description'))
                 <InternetIcon class="w-5 h-5" />
               </a>
               <NuxtLink
-                :to="localePath(`/projects#${processName(content.name)}`)"
+                :to="localePath('/projects')"
                 class="flex items-center border-[1px] border-link_border px-1 py-1 rounded text-btn_text text-sm hover:bg-border_sm transition-colors md:px-2 w-fit"
               >
                 {{ description }} <ArrowRightIcon class="ml-[0.5px] w-5 h-5" />

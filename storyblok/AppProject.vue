@@ -6,14 +6,10 @@ defineProps({
     default: () => ({}),
   },
 })
-
-const processName = (name) => {
-  return name.replaceAll(' ', '-')
-}
 </script>
 
 <template>
-  <div v-editable="blok" :id="processName(blok.name)">
+  <div v-editable="blok">
     <div class="flex flex-col items-center gap-4 lg:gap-6">
       <div class="flex flex-col items-center gap-2">
         <img
