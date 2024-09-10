@@ -1,7 +1,7 @@
 <script setup>
 const { t } = useI18n()
-const credits = computed(() => t("AppFooter.credits"))
-const madeWith = computed(() => t("AppFooter.madeWith"))
+const credits = computed(() => t('AppFooter.credits'))
+const madeWith = computed(() => t('AppFooter.madeWith'))
 </script>
 
 <template>

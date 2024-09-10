@@ -22,7 +22,7 @@ defineProps({
         class="flex flex-col gap-2 lg:gap-2"
       >
         <a
-          class="flex flex-col items-start justify-between gap-1 sm:flex-row flex-nowrap sm:gap-6"
+          class="flex flex-col items-start justify-between gap-1 flex-nowrap lg:flex-row lg:gap-6"
           ><span class="font-theme_bold text-head_text">{{
             body[0].value
           }}</span
