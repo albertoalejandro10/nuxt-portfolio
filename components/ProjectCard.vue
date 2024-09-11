@@ -1,3 +1,18 @@
+<script setup>
+defineProps({
+  blok: {
+    type: Object,
+    required: true,
+    default: () => ({}),
+  },
+})
+
+const isExpanded = ref(false)
+const toggleExpand = () => {
+  isExpanded.value = !isExpanded.value
+}
+</script>
+
 <template>
   <div
     class="bg-background/90 flex flex-col justify-between gap-1 overflow-hidden rounded-md h-full hover:scale-105 hover:shadow hover:shadow-green-900 transition-transform duration-300"
@@ -24,9 +39,9 @@
         <div
           v-for="{ alt, filename } in blok.icons"
           :key="filename"
-          class="flex gap-x-1 text-sm bg-green-900 text-gray-200 rounded-md px-3 py-1"
+          class="flex items-center gap-x-1 text-xs bg-green-900 text-gray-200 rounded-md px-3 py-1"
         >
-          <img :src="filename" :alt="alt" width="16" height="16" />
+          <img :src="filename" :alt="alt" class="w-4 h-4" />
           {{ alt }}
         </div>
       </div>
@@ -39,24 +54,9 @@
           v-for="button in blok.buttons"
           :key="button._uid"
           :blok="button"
-          class="bg-btn_back border-[1px] border-link_border px-2 py-2 rounded-md font-theme_bold text-btn_text text-sm hover:bg-border_sm transition-colors md:px-4 slg:text-base slg:px-6 slg:py-3 w-fit"
+          class="bg-btn_back border-[1px] border-link_border px-2 py-2 rounded-md font-theme_bold text-btn_text text-xs md:text-sm hover:bg-border_sm transition-colors w-fit"
         />
       </div>
     </div>
   </div>
 </template>
-
-<script setup>
-defineProps({
-  blok: {
-    type: Object,
-    required: true,
-    default: () => ({}),
-  },
-})
-
-const isExpanded = ref(false)
-const toggleExpand = () => {
-  isExpanded.value = !isExpanded.value
-}
-</script>

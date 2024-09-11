@@ -1,6 +1,5 @@
 <script setup>
-import ProjectCard from '@/components/ProjectCard.vue'
-// import NonFrontendProjectCard from '@/components/NonFrontendProjectCard.vue'
+import BackendProjectCard from '@/components/BackendProjectCard.vue'
 
 defineProps({
   blok: {
@@ -13,15 +12,14 @@ defineProps({
 
 <template>
   <div v-editable="blok">
-    <!-- Frontend Projects Section -->
-    <ProjectCard :blok="blok" />
+    <BackendProjectCard :blok="blok" />
   </div>
 
   <!-- Non-Frontend Projects Section -->
   <!-- <section>
     <h2 class="text-2xl font-semibold mb-6">Other Projects</h2>
     <div class="space-y-6">
-      <NonFrontendProjectCard
+      <BackendProjectCard
         v-for="project in nonFrontendProjects"
         :key="project.id"
         :project="project"
