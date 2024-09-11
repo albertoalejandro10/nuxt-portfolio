@@ -13,7 +13,7 @@ defineProps({
     class="bg-background/90 flex flex-col justify-between gap-2 overflow-hidden rounded-md hover:scale-105 hover:shadow hover:shadow-green-900 transition-transform duration-300"
   >
     <div class="p-5 flex flex-col lg:flex-row justify-between">
-      <div class="w-2/3">
+      <div class="w-full lg:w-2/3">
         <h3 class="text-lg font-semibold mb-2">{{ blok.name }}</h3>
         <p class="text-sm mb-2">{{ blok.description }}</p>
         <div class="flex flex-wrap items-center gap-1 mb-2">
