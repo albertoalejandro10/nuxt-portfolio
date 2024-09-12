@@ -10,7 +10,7 @@ defineProps({
 
 <template>
   <div
-    class="bg-background/90 flex flex-col justify-between gap-2 overflow-hidden rounded-md hover:scale-105 hover:shadow hover:shadow-green-900 transition-transform duration-300"
+    class="bg-background/90 flex flex-col justify-between gap-2 overflow-hidden rounded-md hover:scale-[1.01] hover:shadow hover:shadow-green-900 transition-transform duration-300"
   >
     <div class="p-5 flex flex-col lg:flex-row justify-between">
       <div class="w-full lg:w-2/3">

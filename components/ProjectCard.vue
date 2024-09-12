@@ -15,7 +15,7 @@ const toggleExpand = () => {
 
 <template>
   <div
-    class="bg-background/90 flex flex-col justify-between gap-1 overflow-hidden rounded-md h-full hover:scale-105 hover:shadow hover:shadow-green-900 transition-transform duration-300"
+    class="bg-background/90 flex flex-col justify-between gap-1 overflow-hidden rounded-md h-full hover:scale-[1.01] hover:shadow hover:shadow-green-900 transition-transform duration-300"
   >
     <img
       :src="blok.image.filename"
