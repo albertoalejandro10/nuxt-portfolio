@@ -4,7 +4,7 @@
 
 ![MIT License](https://img.shields.io/badge/license-MIT-green)
 
-An open-source, fully customizable portfolio template built with **Nuxt.js 3** and **Storyblok**. This project aims to help new Nuxt.js developers create stunning portfolios that capture the attention of both developers and recruiters. 
+An open-source, fully customizable portfolio built with **Nuxt.js 3** and **Storyblok**. This project aims to help new Nuxt.js developers create stunning portfolios that capture the attention of both developers and recruiters. 
 
 Check out the [live demo](https://albertoalejandro10.netlify.app/) of the portfolio.
 
